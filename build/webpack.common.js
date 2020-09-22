@@ -2,6 +2,7 @@ const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
+const StylelintPlugin = require("stylelint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -52,6 +53,10 @@ const commonConfig = {
     ],
   },
   plugins: [
+    new StylelintPlugin({
+      configFile: "stylelint.config.js",
+      fix: true,
+    }),
     new CleanWebpackPlugin({}),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
