@@ -26,6 +26,7 @@
     "stylelint": "^13.7.1",
     "stylelint-config-property-sort-order-smacss": "^6.3.0",
     "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.18.0",
     "stylelint-webpack-plugin": "^2.1.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.2",
