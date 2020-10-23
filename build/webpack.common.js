@@ -90,6 +90,11 @@ const commonConfig = {
         removeAttributeQuotes: true,
       },
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: "", to: "" },
+      ],
+    }),
     new PurgecssPlugin({
       paths: glob.sync(`${path.resolve(__dirname, "../src")}/**/*`, {
         nodir: true,
